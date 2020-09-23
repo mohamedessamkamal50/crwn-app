@@ -1,11 +1,7 @@
 import React from 'react';
-
 import FromInput from '../form-input/form-input.component';
-
 import CustomButton from '../custom-button/custom-button.component';
-
 import { auth, createUserProfileDocument } from '../../firebase/firebase.utils';
-
 import './sign-up.style.scss';
 
 class SignUp extends React.Component {
@@ -43,7 +39,7 @@ class SignUp extends React.Component {
         }
     };
 
-    handleChanger = event =>{
+    handleChange = event =>{
         const { name, value } = event.target;
         this.setState({[name] : value});
     };
@@ -60,7 +56,7 @@ class SignUp extends React.Component {
                     type='text'
                     name='displayName'
                     value={displayName}
-                    onChange={this.handleChanger}
+                    onChange={this.handleChange}
                     label='Display Name'
                     required
                     />
@@ -69,7 +65,7 @@ class SignUp extends React.Component {
                     type='email'
                     name='email'
                     value={email}
-                    onChange={this.handleChanger}
+                    onChange={this.handleChange}
                     label='Email'
                     required
                     />
@@ -78,7 +74,7 @@ class SignUp extends React.Component {
                     type='password'
                     name='password'
                     value={password}
-                    onChange={this.handleChanger}
+                    onChange={this.handleChange}
                     label='Password'
                     required
                     />
@@ -87,7 +83,7 @@ class SignUp extends React.Component {
                     type='password'
                     name='confirmPassword'
                     value={confirmPassword}
-                    onChange={this.handleChanger}
+                    onChange={this.handleChange}
                     label='Confirm Password'
                     required
                     />      
